@@ -1,0 +1,706 @@
+[
+{
+  "id": "pastel-de-papas",
+  "title": "Pastel de papas",
+  "image": "images/recipes/pastel-de-papas.png",
+  "time": 60,
+  "defaultServings": 4,
+  "rating": 4.8,
+  "mealType": "almuerzo",
+  "ingredients": [
+    {
+      "name": "papas",
+      "baseAmount": 1,
+      "unit": "kg",
+      "caloriesPerUnit": 770,
+      "totalCalories": 770
+    },
+    {
+      "name": "carne picada (vacuna)",
+      "baseAmount": 500,
+      "unit": "g",
+      "caloriesPerUnit": 250,
+      "totalCalories": 1250
+    },
+    {
+      "name": "cebolla",
+      "baseAmount": 2,
+      "unit": "unidades",
+      "caloriesPerUnit": 40,
+      "totalCalories": 80
+    },
+    {
+      "name": "manteca o aceite",
+      "baseAmount": 2,
+      "unit": "cucharadas",
+      "caloriesPerUnit": 120,
+      "totalCalories": 240
+    },
+    {
+      "name": "leche",
+      "baseAmount": 100,
+      "unit": "ml",
+      "caloriesPerUnit": 60,
+      "totalCalories": 60
+    },
+    {
+      "name": "huevos duros",
+      "baseAmount": 2,
+      "unit": "unidades",
+      "caloriesPerUnit": 155,
+      "totalCalories": 310
+    },
+    {
+      "name": "aceitunas verdes (opcional)",
+      "baseAmount": 10,
+      "unit": "unidades",
+      "caloriesPerUnit": 6,
+      "totalCalories": 60
+    },
+    {
+      "name": "sal, pimienta, pimentón, comino",
+      "baseAmount": 1,
+      "unit": "al gusto",
+      "caloriesPerUnit": 0,
+      "totalCalories": 0
+    },
+    {
+      "name": "queso rallado para gratinar (opcional)",
+      "baseAmount": 50,
+      "unit": "g",
+      "caloriesPerUnit": 390,
+      "totalCalories": 195
+    }
+  ],
+  "instructions": [
+    "Pelar y hervir las papas hasta que estén tiernas. Hacer un puré con leche, manteca, sal y pimienta.",
+    "Picar la cebolla y saltearla. Agregar la carne picada, condimentar con sal, pimienta, pimentón y comino.",
+    "Cocinar hasta que la carne esté dorada. Agregar huevo duro picado y aceitunas si se desea.",
+    "En una fuente, colocar una capa de puré, el relleno de carne y otra capa de puré encima.",
+    "Espolvorear con queso rallado y llevar al horno hasta gratinar."
+  ],
+  "tips": [
+    "Podés usar puré instantáneo para ahorrar tiempo, pero el casero es más sabroso.",
+    "Dejá reposar unos minutos antes de cortar para que se mantenga firme.",
+    "Servilo con una ensalada fresca para equilibrar el plato."
+  ],
+  "variants": {
+    "vegetariana": {
+      "image": "images/recipes/pastel-vegetariana.png",
+      "modifiedInstructions": [
+        "Reemplazar la carne por lentejas cocidas o soja texturizada hidratada y condimentar igual que la carne."
+      ],
+      "additionalIngredients": [
+        {
+          "name": "lentejas cocidas",
+          "baseAmount": 300,
+          "unit": "g",
+          "caloriesPerUnit": 116,
+          "totalCalories": 348
+        }
+      ]
+    },
+    "con batata": {
+      "modifiedInstructions": [
+        "Reemplazar parte o todas las papas por batatas hervidas. El puré quedará más dulce y cremoso."
+      ]
+    },
+    "light": {
+      "modifiedInstructions": [
+        "Usar leche descremada, reducir la manteca a 1 cda, y carne magra o mezcla con vegetales. Opción sin queso."
+      ]
+    },
+    "sin TACC": {
+      "modifiedInstructions": [
+        "Asegurarse de que todos los ingredientes (manteca, leche, especias) sean aptos celíacos. No usar queso rallado con almidón."
+      ]
+    }
+  }
+},
+
+{
+  "id": "tarta-de-zapallitos",
+  "title": "Tarta de zapallitos",
+  "image": "images/recipes/tarta-de-zapallitos.png",
+  "time": 50,
+  "defaultServings": 4,
+  "rating": 4.6,
+  "mealType": "almuerzo",
+  "ingredients": [
+    {
+      "name": "masa para tarta (hojaldrada o criolla)",
+      "baseAmount": 1,
+      "unit": "unidad",
+      "caloriesPerUnit": 350,
+      "totalCalories": 350
+    },
+    {
+      "name": "zapallitos",
+      "baseAmount": 4,
+      "unit": "unidades",
+      "caloriesPerUnit": 20,
+      "totalCalories": 80
+    },
+    {
+      "name": "cebolla",
+      "baseAmount": 1,
+      "unit": "unidad",
+      "caloriesPerUnit": 40,
+      "totalCalories": 40
+    },
+    {
+      "name": "huevos",
+      "baseAmount": 3,
+      "unit": "unidades",
+      "caloriesPerUnit": 155,
+      "totalCalories": 465
+    },
+    {
+      "name": "queso rallado",
+      "baseAmount": 100,
+      "unit": "g",
+      "caloriesPerUnit": 390,
+      "totalCalories": 390
+    },
+    {
+      "name": "sal y pimienta",
+      "baseAmount": 1,
+      "unit": "al gusto",
+      "caloriesPerUnit": 0,
+      "totalCalories": 0
+    },
+    {
+      "name": "aceite",
+      "baseAmount": 2,
+      "unit": "cucharadas",
+      "caloriesPerUnit": 120,
+      "totalCalories": 240
+    }
+  ],
+  "instructions": [
+    "Cortar los zapallitos en cubos y hervirlos hasta que estén tiernos. Escurrir bien.",
+    "Picar la cebolla y saltearla en aceite hasta que esté transparente.",
+    "En un bol, mezclar los zapallitos, la cebolla, los huevos batidos, el queso rallado, sal y pimienta.",
+    "Colocar la masa en una tartera y volcar la mezcla.",
+    "Hornear a 180°C durante 30-35 minutos hasta que esté dorada."
+  ],
+  "tips": [
+    "Escurrí bien los zapallitos para que la tarta no quede aguada.",
+    "Podés agregar una cucharada de pan rallado si la mezcla queda muy líquida.",
+    "Servila con ensalada fresca para un almuerzo completo."
+  ],
+  "variants": {
+    "con jamón y queso": {
+      "additionalIngredients": [
+        {
+          "name": "jamón cocido",
+          "baseAmount": 100,
+          "unit": "g",
+          "caloriesPerUnit": 145,
+          "totalCalories": 145
+        },
+        {
+          "name": "queso en fetas",
+          "baseAmount": 100,
+          "unit": "g",
+          "caloriesPerUnit": 280,
+          "totalCalories": 280
+        }
+      ],
+      "modifiedInstructions": [
+        "Agregar jamón en tiritas y queso en cubos a la mezcla antes de colocarla en la masa."
+      ]
+    },
+    "light": {
+      "modifiedInstructions": [
+        "Usar solo 2 huevos y queso descremado o sin sal. Se puede reemplazar parte de la masa por base de avena o descartarla para una versión sin masa."
+      ]
+    },
+    "vegetariana-proteica": {
+      "additionalIngredients": [
+        {
+          "name": "tofu firme desmenuzado",
+          "baseAmount": 100,
+          "unit": "g",
+          "caloriesPerUnit": 76,
+          "totalCalories": 76
+        }
+      ],
+      "modifiedInstructions": [
+        "Agregar el tofu desmenuzado junto con los zapallitos para aumentar el aporte proteico sin usar carne."
+      ]
+    },
+    "sin TACC": {
+      "modifiedInstructions": [
+        "Usar masa sin gluten y asegurarse de que todos los ingredientes sean aptos para celíacos."
+      ]
+    }
+  }
+},
+{
+  "id": "milanesas-con-pure",
+  "title": "Milanesas con puré",
+  "image": "images/recipes/milanesas-con-pure.png",
+  "time": 45,
+  "defaultServings": 4,
+  "rating": 4.9,
+  "mealType": "almuerzo",
+  "ingredients": [
+    {
+      "name": "carne para milanesa (nalga o bola de lomo)",
+      "baseAmount": 600,
+      "unit": "g",
+      "caloriesPerUnit": 143,
+      "totalCalories": 858
+    },
+    {
+      "name": "pan rallado",
+      "baseAmount": 200,
+      "unit": "g",
+      "caloriesPerUnit": 351,
+      "totalCalories": 702
+    },
+    {
+      "name": "huevos",
+      "baseAmount": 3,
+      "unit": "",
+      "caloriesPerUnit": 155,
+      "totalCalories": 465
+    },
+    {
+      "name": "papas",
+      "baseAmount": 800,
+      "unit": "g",
+      "caloriesPerUnit": 77,
+      "totalCalories": 616
+    },
+    {
+      "name": "leche",
+      "baseAmount": 100,
+      "unit": "ml",
+      "caloriesPerUnit": 42,
+      "totalCalories": 42
+    },
+    {
+      "name": "manteca",
+      "baseAmount": 1,
+      "unit": "cucharada",
+      "caloriesPerUnit": 102,
+      "totalCalories": 102
+    },
+    {
+      "name": "sal y pimienta",
+      "baseAmount": 1,
+      "unit": "al gusto",
+      "caloriesPerUnit": 0,
+      "totalCalories": 0
+    },
+    {
+      "name": "aceite para freír",
+      "baseAmount": 500,
+      "unit": "ml",
+      "caloriesPerUnit": 884,
+      "totalCalories": 884
+    }
+  ],
+  "instructions": [
+    "Pasar las fetas de carne por huevo batido y luego por pan rallado.",
+    "Freír las milanesas en aceite caliente hasta que estén doradas.",
+    "Hervir las papas peladas hasta que estén tiernas, colar y hacer un puré con manteca, leche, sal y pimienta.",
+    "Servir caliente con el puré como acompañamiento."
+  ],
+  "tips": [
+    "Se pueden hacer al horno para una versión más saludable.",
+    "Acompañá con una ensalada de tomate y lechuga.",
+    "Usá pan rallado casero para más sabor."
+  ],
+  "variants": {
+    "de pollo": {
+      "additionalIngredients": [
+        {
+          "name": "pechuga de pollo en filetes",
+          "baseAmount": 600,
+          "unit": "g",
+          "caloriesPerUnit": 165,
+          "totalCalories": 990
+        }
+      ],
+      "modifiedInstructions": [
+        "Sustituí la carne vacuna por pechugas de pollo fileteadas."
+      ]
+    },
+    "napolitana": {
+      "additionalIngredients": [
+        {
+          "name": "jamón cocido",
+          "baseAmount": 100,
+          "unit": "g",
+          "caloriesPerUnit": 145,
+          "totalCalories": 145
+        },
+        {
+          "name": "queso mozzarella",
+          "baseAmount": 150,
+          "unit": "g",
+          "caloriesPerUnit": 280,
+          "totalCalories": 420
+        },
+        {
+          "name": "salsa de tomate",
+          "baseAmount": 100,
+          "unit": "g",
+          "caloriesPerUnit": 29,
+          "totalCalories": 29
+        }
+      ],
+      "modifiedInstructions": [
+        "Cubrí las milanesas ya cocidas con salsa, jamón y queso. Llevá al horno hasta gratinar."
+      ]
+    },
+    "vegetariana": {
+      "additionalIngredients": [
+        {
+          "name": "berenjenas en rodajas",
+          "baseAmount": 600,
+          "unit": "g",
+          "caloriesPerUnit": 25,
+          "totalCalories": 150
+        }
+      ],
+      "modifiedInstructions": [
+        "Sustituí la carne por rodajas de berenjena rebozadas y cocinadas al horno o fritas."
+      ]
+    }
+  }
+},
+{
+  "id": "pizza-muzzarella",
+  "title": "Pizza de muzzarella",
+  "image": "images/recipes/pizza-muzzarella.png",
+  "time": 45,
+  "defaultServings": 4,
+  "rating": 4.7,
+  "mealType": "cena",
+  "ingredients": [
+    {
+      "name": "harina 000",
+      "baseAmount": 500,
+      "unit": "g",
+      "caloriesPerUnit": 364,
+      "totalCalories": 1820
+    },
+    {
+      "name": "agua",
+      "baseAmount": 300,
+      "unit": "ml",
+      "caloriesPerUnit": 0,
+      "totalCalories": 0
+    },
+    {
+      "name": "levadura fresca",
+      "baseAmount": 25,
+      "unit": "g",
+      "caloriesPerUnit": 105,
+      "totalCalories": 26.25
+    },
+    {
+      "name": "sal",
+      "baseAmount": 1,
+      "unit": "cucharadita",
+      "caloriesPerUnit": 0,
+      "totalCalories": 0
+    },
+    {
+      "name": "aceite de oliva",
+      "baseAmount": 2,
+      "unit": "cucharadas",
+      "caloriesPerUnit": 119,
+      "totalCalories": 238
+    },
+    {
+      "name": "salsa de tomate",
+      "baseAmount": 200,
+      "unit": "g",
+      "caloriesPerUnit": 29,
+      "totalCalories": 58
+    },
+    {
+      "name": "queso muzzarella",
+      "baseAmount": 300,
+      "unit": "g",
+      "caloriesPerUnit": 280,
+      "totalCalories": 840
+    },
+    {
+      "name": "orégano",
+      "baseAmount": 1,
+      "unit": "cucharadita",
+      "caloriesPerUnit": 6,
+      "totalCalories": 6
+    }
+  ],
+  "instructions": [
+    "Mezclar la levadura con agua tibia y dejar reposar 10 minutos.",
+    "Colocar la harina en un bowl, agregar la sal, el aceite y la mezcla de levadura.",
+    "Amasar hasta formar una masa suave y dejar levar 1 hora.",
+    "Estirar la masa, colocar en una pizzera, cubrir con salsa de tomate y hornear 10 minutos.",
+    "Agregar la muzzarella, espolvorear con orégano y hornear hasta que el queso se derrita y dore."
+  ],
+  "tips": [
+    "Para una masa más crocante, prehorneá la base con un poco de aceite.",
+    "Usá muzzarella fresca rallada para mejor derretido.",
+    "Podés añadir un toque de ajo en la salsa para más sabor."
+  ],
+  "variants": {
+    "napolitana": {
+      "modifiedInstructions": [
+        "Agregar rodajas de tomate fresco y ajo picado antes de hornear con la muzzarella."
+      ],
+      "additionalIngredients": [
+        {
+          "name": "tomate fresco",
+          "baseAmount": 1,
+          "unit": "unidad",
+          "caloriesPerUnit": 22,
+          "totalCalories": 22
+        },
+        {
+          "name": "ajo picado",
+          "baseAmount": 1,
+          "unit": "diente",
+          "caloriesPerUnit": 4,
+          "totalCalories": 4
+        }
+      ]
+    },
+    "con jamón": {
+      "modifiedInstructions": [
+        "Agregar fetas de jamón cocido sobre la muzzarella antes de hornear."
+      ],
+      "additionalIngredients": [
+        {
+          "name": "jamón cocido",
+          "baseAmount": 100,
+          "unit": "g",
+          "caloriesPerUnit": 145,
+          "totalCalories": 145
+        }
+      ]
+    },
+    "fugazzeta": {
+      "modifiedInstructions": [
+        "Cubrir con cebolla cortada fina y queso muzzarella extra antes de hornear."
+      ],
+      "additionalIngredients": [
+        {
+          "name": "cebolla",
+          "baseAmount": 2,
+          "unit": "unidades",
+          "caloriesPerUnit": 40,
+          "totalCalories": 80
+        }
+      ]
+    }
+  }
+},
+{
+  "id": "spaghetti-con-salsa",
+  "title": "Spaghetti con salsa de tomate",
+  "image": "images/recipes/spaghetti-con-salsa.png",
+  "time": 30,
+  "defaultServings": 4,
+  "rating": 4.6,
+  "mealType": "almuerzo",
+  "ingredients": [
+    {
+      "name": "spaghetti",
+      "baseAmount": 400,
+      "unit": "g",
+      "caloriesPerUnit": 350,
+      "totalCalories": 1400
+    },
+    {
+      "name": "salsa de tomate",
+      "baseAmount": 400,
+      "unit": "g",
+      "caloriesPerUnit": 40,
+      "totalCalories": 160
+    },
+    {
+      "name": "cebolla",
+      "baseAmount": 1,
+      "unit": "unidad",
+      "caloriesPerUnit": 40,
+      "totalCalories": 40
+    },
+    {
+      "name": "ajo",
+      "baseAmount": 2,
+      "unit": "dientes",
+      "caloriesPerUnit": 5,
+      "totalCalories": 10
+    },
+    {
+      "name": "aceite de oliva",
+      "baseAmount": 2,
+      "unit": "cucharadas",
+      "caloriesPerUnit": 120,
+      "totalCalories": 240
+    },
+    {
+      "name": "sal y pimienta",
+      "baseAmount": 1,
+      "unit": "al gusto",
+      "caloriesPerUnit": 0,
+      "totalCalories": 0
+    },
+    {
+      "name": "queso rallado",
+      "baseAmount": 50,
+      "unit": "g",
+      "caloriesPerUnit": 390,
+      "totalCalories": 195
+    }
+  ],
+  "instructions": [
+    "Hervir los spaghetti en abundante agua con sal hasta que estén al dente.",
+    "Picar la cebolla y el ajo. Rehogar en aceite de oliva hasta que estén dorados.",
+    "Agregar la salsa de tomate y cocinar a fuego lento 10 minutos. Condimentar con sal y pimienta.",
+    "Colar los spaghetti y mezclar con la salsa.",
+    "Servir con queso rallado por encima."
+  ],
+  "tips": [
+    "Agregá una hoja de laurel o un poco de orégano a la salsa para más sabor.",
+    "Podés usar tomates frescos pelados en lugar de salsa envasada.",
+    "Para que no se peguen los fideos, revolvé durante la cocción."
+  ],
+  "variants": {
+    "boloñesa": {
+      "modifiedInstructions": [
+        "Agregar 250 g de carne picada a la cebolla y ajo antes de la salsa de tomate. Cocinar hasta que esté dorada."
+      ],
+      "additionalIngredients": [
+        {
+          "name": "carne picada",
+          "baseAmount": 250,
+          "unit": "g",
+          "caloriesPerUnit": 250,
+          "totalCalories": 625
+        }
+      ]
+    },
+    "vegetariana": {
+      "modifiedInstructions": [
+        "Agregar trozos de berenjena, zucchini y morrón salteados a la salsa."
+      ],
+      "additionalIngredients": [
+        {
+          "name": "berenjena",
+          "baseAmount": 1,
+          "unit": "unidad",
+          "caloriesPerUnit": 35,
+          "totalCalories": 35
+        }
+      ]
+    },
+    "sin TACC": {
+      "modifiedInstructions": [
+        "Usar spaghetti de arroz o maíz aptos para celíacos y verificar que la salsa sea libre de gluten."
+      ]
+    },
+    "light": {
+      "modifiedInstructions": [
+        "Reducir el aceite a 1 cda y evitar el queso rallado. Usar pasta integral para más fibra."
+      ]
+    }
+  }
+},
+
+{
+  "id": "flan-con-dulce-de-leche",
+  "title": "Flan con dulce de leche",
+  "image": "images/recipes/flan-con-dulce-de-leche.png",
+  "time": 90,
+  "defaultServings": 6,
+  "rating": 4.9,
+  "mealType": "postre",
+  "ingredients": [
+    {
+      "name": "huevos",
+      "baseAmount": 6,
+      "unit": "unidades",
+      "caloriesPerUnit": 155,
+      "totalCalories": 930
+    },
+    {
+      "name": "leche",
+      "baseAmount": 1,
+      "unit": "litro",
+      "caloriesPerUnit": 60,
+      "totalCalories": 600
+    },
+    {
+      "name": "azúcar",
+      "baseAmount": 200,
+      "unit": "g",
+      "caloriesPerUnit": 387,
+      "totalCalories": 774
+    },
+    {
+      "name": "esencia de vainilla",
+      "baseAmount": 1,
+      "unit": "cucharadita",
+      "caloriesPerUnit": 12,
+      "totalCalories": 12
+    },
+    {
+      "name": "dulce de leche",
+      "baseAmount": 150,
+      "unit": "g",
+      "caloriesPerUnit": 315,
+      "totalCalories": 472
+    }
+  ],
+  "instructions": [
+    "Precalentar el horno a 160 °C.",
+    "Batir ligeramente los huevos y añadir la leche, el azúcar y la esencia de vainilla.",
+    "Preparar un caramelo con 100 g de azúcar en una flanera y esparcirlo por todo el molde.",
+    "Verter la mezcla en el molde con caramelo.",
+    "Cocinar a baño María en el horno durante 1 hora aproximadamente.",
+    "Dejar enfriar y refrigerar al menos 4 horas antes de desmoldar.",
+    "Servir con una cucharada generosa de dulce de leche."
+  ],
+  "tips": [
+    "Para un flan más cremoso, usar mitad leche entera y mitad leche condensada.",
+    "No batir demasiado para evitar que se formen burbujas.",
+    "Dejar enfriar completamente antes de desmoldar para evitar que se rompa."
+  ],
+  "variants": {
+    "light": {
+      "modifiedInstructions": [
+        "Reemplazar la leche entera por leche descremada y reducir el azúcar a 100 g. Usar dulce de leche light o evitarlo."
+      ]
+    },
+    "sin azúcar": {
+      "modifiedInstructions": [
+        "Reemplazar el azúcar por edulcorante apto para cocción (consultar equivalencias). Omitir el caramelo o usar uno sin azúcar."
+      ]
+    },
+    "con coco": {
+      "modifiedInstructions": [
+        "Agregar 100 g de coco rallado a la mezcla antes de llevar al horno para un sabor distinto."
+      ],
+      "additionalIngredients": [
+        {
+          "name": "coco rallado",
+          "baseAmount": 100,
+          "unit": "g",
+          "caloriesPerUnit": 660,
+          "totalCalories": 660
+        }
+      ]
+    }
+  }
+}
+
+]

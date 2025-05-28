@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Q'COMEMOS - Comunidad">
+    <meta name="theme-color" content="#7C4DFF">
+    <title>Q'COMEMOS - Comunidad</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="./images/logo.ico" type="image/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Q'COMEMOS" height="40">
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-link" id="languageToggle" data-bs-toggle="dropdown">
+                    <i class="bi bi-globe"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <button class="dropdown-item" data-lang="es">Español</button>
+                    <button class="dropdown-item" data-lang="en">English</button>
+                </div>
+                <button class="btn btn-link" id="themeToggle">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <a href="profile.html" class="user-profile">
+                    <img src="images/default-avatar.png" alt="Profile" class="rounded-circle" width="35">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container main-content px-3">
+        <!-- Stories -->
+        <section class="stories-section mt-4 mb-4">
+            <div class="stories-scroll">
+                <div class="d-flex gap-3">
+                    <div class="story-item">
+                        <div class="story-add">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                        <span>Crear</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="images/friends/isabella.jpeg" alt="Isabella">
+                        <span>Isabella</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="images/friends/mateo.png" alt="Mateo">
+                        <span>Mateo</span>
+                    </div>
+                    <div class="story-item">
+                        <img src="images/friends/lucia.png" alt="Lucia">
+                        <span>Lucia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feed -->
+        <section class="feed-section">
+            <!-- Post Card -->
+            <div class="post-card mb-4">
+                <div class="post-header d-flex align-items-center p-3">
+                    <img src="images/friends/isabella.jpeg" alt="Isabella" class="rounded-circle" width="40">
+                    <div class="ms-3">
+                        <h2 class="h6 mb-0">Isabella</h2>
+                        <small class="text-muted">Hace 2 horas</small>
+                    </div>
+                </div>
+                <img src="images/posts/pasta-casera.png" alt="Pasta casera" class="post-image">
+                <div class="post-actions p-3">
+                    <button class="btn btn-link"><i class="bi bi-heart"></i></button>
+                    <button class="btn btn-link"><i class="bi bi-chat"></i></button>
+                    <button class="btn btn-link"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="post-content px-3 pb-3">
+                    <p class="mb-2"><strong>Isabella</strong> Hoy hice pasta casera por primera vez! 🍝</p>
+                    <div class="post-comments">
+                        <small class="text-muted">Ver los 5 comentarios</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Post Cards -->
+            <div class="post-card mb-4">
+                <div class="post-header d-flex align-items-center p-3">
+                    <img src="images/friends/mateo.png" alt="Mateo" class="rounded-circle" width="40">
+                    <div class="ms-3">
+                        <h2 class="h6 mb-0">Mateo</h2>
+                        <small class="text-muted">Hace 5 horas</small>
+                    </div>
+                </div>
+                <img src="images/posts/pizza-casera.png" alt="Pizza casera" class="post-image">
+                <div class="post-actions p-3">
+                    <button class="btn btn-link"><i class="bi bi-heart"></i></button>
+                    <button class="btn btn-link"><i class="bi bi-chat"></i></button>
+                    <button class="btn btn-link"><i class="bi bi-bookmark"></i></button>
+                </div>
+                <div class="post-content px-3 pb-3">
+                    <p class="mb-2"><strong>Mateo</strong> Pizza de masa madre 🍕</p>
+                    <div class="post-comments">
+                        <small class="text-muted">Ver los 3 comentarios</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- New Post FAB -->
+    <button class="floating-action-btn" id="newPostBtn">
+        <i class="bi bi-plus-lg"></i>
+    </button>
+
+    <!-- Bottom Navigation -->
+    <nav class="navbar fixed-bottom navbar-light bg-white border-top">
+        <div class="container">
+            <div class="row w-100">
+                <div class="col text-center">
+                    <a href="index.html" class="nav-link">
+                        <i class="bi bi-house"></i>
+                        <span class="d-block small">Inicio</span>
+                    </a>
+                </div>
+                <div class="col text-center">
+                    <a href="recipes.html" class="nav-link">
+                      <i class="bi-file-text"></i>
+                      <span class="d-block small">Recetas</span>
+                    </a>
+                  </div>
+                <div class="col text-center">
+                    <a href="planning.html" class="nav-link">
+                        <i class="bi bi-calendar-week"></i>
+                        <span class="d-block small">Planificar</span>
+                    </a>
+                </div>
+                <div class="col text-center">
+                    <a href="community.html" class="nav-link active">
+                        <i class="bi bi-chat-dots-fill"></i>
+                        <span class="d-block small">Comunidad</span>
+                    </a>
+                </div>
+                <div class="col text-center">
+                    <a href="profile.html" class="nav-link">
+                        <i class="bi bi-person"></i>
+                        <span class="d-block small">Perfil</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="hourglass"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/community.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>

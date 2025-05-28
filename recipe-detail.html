@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q'COMEMOS - Detalles de Receta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Recipe Modal - Tarta de Zapallitos -->
+    <div class="modal fade" id="modal-tarta" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="recipe-detail-header">
+                        <img src="images/recipes/tarta-de-zapallitos.png" alt="Tarta de Zapallitos" class="img-fluid rounded mb-3">
+                        <div class="recipe-detail-info">
+                            <h1 class="h4 mb-2">Tarta de Zapallitos</h1>
+                            <div class="recipe-meta mb-3">
+                                <div class="d-flex gap-3 align-items-center justify-content-center mb-2 fs-7">
+                                    <span><i class="bi bi-clock fs-5"></i> 50 min</span>
+                                    <span><i class="bi bi-people fs-5"></i> <span id="servings-tarta">4</span></span>
+                                    <span><i class="bi bi-star-fill fs-5 text-warning"></i> 4.6</span>
+                                </div>
+                                <div class="servings-control d-flex align-items-center justify-content-center gap-2">
+                                    <button class="btn btn-outline-primary" onclick="adjustServings(-1, 'tarta')">-</button>
+                                    <span class="mx-2 fs-6" id="servingsNumber-tarta">4</span>
+                                    <button class="btn btn-outline-primary" onclick="adjustServings(1, 'tarta')">+</button>
+                                </div>
+                            </div>
+                            <div class="recipe-actions d-flex flex-row justify-content-center gap-1 mb-2">
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1">
+                                    <i class="bi bi-bookmark"></i> Guardar
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1">
+                                    <i class="bi bi-share"></i> Compartir
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1" onclick="addRecipeToList('tarta')">
+                                    <i class="bi bi-cart-plus"></i> Agregar a lista
+                                </button>
+                                <div class="recipe-variants flex-grow-1">
+                                    <button class="btn btn-outline-secondary btn-sm dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+                                        <i class="bi bi-arrow-repeat"></i> Variantes
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('tarta', 'con jamón y queso')">con jamón y queso</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('tarta', 'light')">light</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('tarta', 'vegetariana-proteica')">vegetariana-proteica</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <!-- Ingredients -->
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Ingredientes</h2>
+                                    <ul class="ingredients-list" id="ingredientsList-tarta">
+                                        <li><span class="ingredient-amount" data-base-amount="1" data-base-servings="4">1</span> unidad de masa para tarta <span class="text-muted">(<span class="calories" data-cal-per-unit="350">350</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="4" data-base-servings="4">4</span> unidades de zapallitos <span class="text-muted">(<span class="calories" data-cal-per-unit="20">80</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="1" data-base-servings="4">1</span> unidad de cebolla <span class="text-muted">(<span class="calories" data-cal-per-unit="40">40</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="3" data-base-servings="4">3</span> unidades de huevos <span class="text-muted">(<span class="calories" data-cal-per-unit="155">465</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="100" data-base-servings="4">100</span> g de queso rallado <span class="text-muted">(<span class="calories" data-cal-per-unit="390">390</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="2" data-base-servings="4">2</span> cucharadas de aceite <span class="text-muted">(<span class="calories" data-cal-per-unit="120">240</span> cal)</span></li>
+                                        <li>Sal y pimienta al gusto <span class="text-muted">(0 cal)</span></li>
+                                    </ul>
+                                    <div class="total-calories text-end mt-3">
+                                        <strong>Total calorías aproximadas:</strong> 1625 cal
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Steps -->
+                        <div class="col-md-8">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Preparación</h2>
+                                    <div class="steps-container">
+                                        <div class="step-item">
+                                            <div class="step-number">1</div>
+                                            <div class="step-content">
+                                                <p>Cortar los zapallitos en cubos y hervirlos hasta que estén tiernos. Escurrir bien.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">2</div>
+                                            <div class="step-content">
+                                                <p>Picar la cebolla y saltearla en aceite hasta que esté transparente.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">3</div>
+                                            <div class="step-content">
+                                                <p>En un bol, mezclar los zapallitos, la cebolla, los huevos batidos, el queso rallado, sal y pimienta.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">4</div>
+                                            <div class="step-content">
+                                                <p>Colocar la masa en una tartera y volcar la mezcla.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">5</div>
+                                            <div class="step-content">
+                                                <p>Hornear a 180°C durante 30-35 minutos hasta que esté dorada.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tips Section -->
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Tips y Consejos</h2>
+                                    <ul class="tips-list">
+                                        <li>Escurrí bien los zapallitos para que la tarta no quede aguada.</li>
+                                        <li>Podés agregar una cucharada de pan rallado si la mezcla queda muy líquida.</li>
+                                        <li>Servila con ensalada fresca para un almuerzo completo.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recipe Modal - Milanesa a la Napolitana -->
+    <div class="modal fade" id="modal-milanesa" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="recipe-detail-header">
+                        <img src="images/recipes/milanesas-a-la-napolitana.png" alt="Milanesa a la Napolitana" class="img-fluid rounded mb-3">
+                        <div class="recipe-detail-info">
+                            <h1 class="h4 mb-2">Milanesa a la Napolitana</h1>
+                            <div class="recipe-meta mb-3">
+                                <div class="d-flex gap-3 align-items-center justify-content-center mb-2 fs-7">
+                                    <span><i class="bi bi-clock fs-5"></i> 50 min</span>
+                                    <span><i class="bi bi-people fs-5"></i> <span id="servings-milanesa">4</span></span>
+                                    <span><i class="bi bi-star-fill fs-5 text-warning"></i> 4.9</span>
+                                </div>
+                                <div class="servings-control d-flex align-items-center justify-content-center gap-2">
+                                    <button class="btn btn-outline-primary" onclick="adjustServings(-1, 'milanesa')">-</button>
+                                    <span class="mx-2 fs-6" id="servingsNumber-milanesa">4</span>
+                                    <button class="btn btn-outline-primary" onclick="adjustServings(1, 'milanesa')">+</button>
+                                </div>
+                            </div>
+                            <div class="recipe-actions d-flex flex-row justify-content-center gap-1 mb-2">
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1">
+                                    <i class="bi bi-bookmark"></i> Guardar
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1">
+                                    <i class="bi bi-share"></i> Compartir
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1" onclick="addRecipeToList('milanesa')">
+                                    <i class="bi bi-cart-plus"></i> Agregar a lista
+                                </button>
+                                <div class="recipe-variants flex-grow-1">
+                                    <button class="btn btn-outline-secondary btn-sm dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+                                        <i class="bi bi-arrow-repeat"></i> Variantes
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('milanesa', 'de pollo')">de pollo</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('milanesa', 'vegetariana')">vegetariana</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <!-- Ingredients -->
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Ingredientes</h2>
+                                    <ul class="ingredients-list" id="ingredientsList-milanesa">
+                                        <li><span class="ingredient-amount" data-base-amount="600" data-base-servings="4">600</span> g de carne para milanesa <span class="text-muted">(<span class="calories" data-cal-per-unit="143">858</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="200" data-base-servings="4">200</span> g de pan rallado <span class="text-muted">(<span class="calories" data-cal-per-unit="351">702</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="3" data-base-servings="4">3</span> unidades de huevos <span class="text-muted">(<span class="calories" data-cal-per-unit="155">465</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="500" data-base-servings="4">500</span> ml de aceite para freír <span class="text-muted">(<span class="calories" data-cal-per-unit="884">884</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="100" data-base-servings="4">100</span> g de jamón cocido <span class="text-muted">(<span class="calories" data-cal-per-unit="145">145</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="150" data-base-servings="4">150</span> g de queso mozzarella <span class="text-muted">(<span class="calories" data-cal-per-unit="280">420</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="100" data-base-servings="4">100</span> g de salsa de tomate <span class="text-muted">(<span class="calories" data-cal-per-unit="29">29</span> cal)</span></li>
+                                    </ul>
+                                    <div class="total-calories text-end mt-3">
+                                        <strong>Total calorías aproximadas:</strong> 3501 cal
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Steps -->
+                        <div class="col-md-8">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Preparación</h2>
+                                    <div class="steps-container">
+                                        <div class="step-item">
+                                            <div class="step-number">1</div>
+                                            <div class="step-content">
+                                                <p>Pasar las fetas de carne por huevo batido y luego por pan rallado.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">2</div>
+                                            <div class="step-content">
+                                                <p>Freír las milanesas en aceite caliente hasta que estén doradas.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">3</div>
+                                            <div class="step-content">
+                                                <p>Colocar las milanesas en una fuente para horno, cubrir con salsa de tomate, jamón y queso mozzarella.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">4</div>
+                                            <div class="step-content">
+                                                <p>Llevar al horno a 200°C hasta que el queso se derrita y gratine.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tips Section -->
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Tips y Consejos</h2>
+                                    <ul class="tips-list">
+                                        <li>Servir con puré o ensalada fresca.</li>
+                                        <li>Se puede usar pollo o berenjena para variantes más livianas.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recipe Modal - Flan con Dulce de Leche -->
+    <div class="modal fade" id="modal-flan" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="recipe-detail-header">
+                        <img src="images/recipes/flan-con-dulce-de-leche.png" alt="Flan con Dulce de Leche" class="img-fluid rounded mb-3">
+                        <div class="recipe-detail-info">
+                            <h1 class="h4 mb-2">Flan con Dulce de Leche</h1>
+                            <div class="recipe-meta mb-3">
+                                <div class="d-flex gap-3 align-items-center justify-content-center mb-2 fs-7">
+                                    <span><i class="bi bi-clock fs-5"></i> 60 min</span>
+                                    <span><i class="bi bi-people fs-5"></i> <span id="servings-flan">6</span></span>
+                                    <span><i class="bi bi-star-fill fs-5 text-warning"></i> 4.8</span>
+                                </div>
+                                <div class="servings-control d-flex align-items-center justify-content-center gap-2">
+                                    <button class="btn btn-outline-primary" onclick="adjustServings(-1,'flan')">-</button>
+                                    <span class="mx-2 fs-6" id="servingsNumber-flan">6</span>
+                                    <button class="btn btn-outline-primary" onclick="adjustServings(1, 'flan')">+</button>
+                                </div>
+                            </div>
+                            <div class="recipe-actions d-flex flex-row justify-content-center gap-1 mb-2">
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1">
+                                    <i class="bi bi-bookmark"></i> Guardar
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1">
+                                    <i class="bi bi-share"></i> Compartir
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1" onclick="addRecipeToList('flan')">
+                                    <i class="bi bi-cart-plus"></i> Agregar a lista
+                                </button>
+                                <div class="recipe-variants flex-grow-1">
+                                    <button class="btn btn-outline-secondary btn-sm dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+                                        <i class="bi bi-arrow-repeat"></i> Variantes
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('flan', 'light')">light</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('flan', 'sin caramelizar')">sin caramelizar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <!-- Ingredientes -->
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Ingredientes</h2>
+                                    <ul class="ingredients-list" id="ingredientsList-flan">
+                                        <li><span class="ingredient-amount" data-base-amount="1" data-base-servings="6">1</span> litro de leche <span class="text-muted">(<span class="calories" data-cal-per-unit="42">420</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="6" data-base-servings="6">6</span> huevos <span class="text-muted">(<span class="calories" data-cal-per-unit="155">930</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="150" data-base-servings="6">150</span> g de azúcar <span class="text-muted">(<span class="calories" data-cal-per-unit="387">581</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="1" data-base-servings="6">1</span> cucharadita de esencia de vainilla <span class="text-muted">(<span class="calories" data-cal-per-unit="12">12</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="200" data-base-servings="6">200</span> g de dulce de leche <span class="text-muted">(<span class="calories" data-cal-per-unit="300">600</span> cal)</span></li>
+                                    </ul>
+                                    <div class="total-calories text-end mt-3">
+                                        <strong>Total calorías aproximadas:</strong> 2543 cal
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Preparación -->
+                        <div class="col-md-8">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Preparación</h2>
+                                    <div class="steps-container">
+                                        <div class="step-item">
+                                            <div class="step-number">1</div>
+                                            <div class="step-content">
+                                                <p>Caramelizar el azúcar y distribuir en moldes individuales.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">2</div>
+                                            <div class="step-content">
+                                                <p>Mezclar la leche, huevos y esencia de vainilla.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">3</div>
+                                            <div class="step-content">
+                                                <p>Verter la mezcla en los moldes y cocinar a baño maría en horno a 180°C por 50-60 minutos.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">4</div>
+                                            <div class="step-content">
+                                                <p>Dejar enfriar y desmoldar.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">5</div>
+                                            <div class="step-content">
+                                                <p>Servir acompañado con dulce de leche encima.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tips -->
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Tips y Consejos</h2>
+                                    <ul class="tips-list">
+                                        <li>Para un flan más cremoso, usá leche entera.</li>
+                                        <li>No abrir el horno durante la cocción para evitar que se baje el flan.</li>
+                                        <li>Podés agregar crema batida para servir.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recipe Modal - Chocotorta -->
+    <div class="modal fade" id="modal-chocotorta" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="recipe-detail-header">
+                        <img src="images/recipes/chocotorta.png" alt="Chocotorta" class="img-fluid rounded mb-3">
+                        <div class="recipe-detail-info">
+                            <h1 class="h4 mb-2">Chocotorta</h1>
+                            <div class="recipe-meta mb-3">
+                                <div class="d-flex gap-3 align-items-center justify-content-center mb-2 fs-7">
+                                    <span><i class="bi bi-clock fs-5"></i> 240 min</span>
+                                    <span><i class="bi bi-people fs-5"></i> <span id="servings-chocotorta">8</span></span>
+                                    <span><i class="bi bi-star-fill fs-5 text-warning"></i> 4.9</span>
+                                </div>
+                                <div class="servings-control d-flex align-items-center justify-content-center gap-2">
+                                    <button class="btn btn-outline-primary" onclick="adjustServings(-1, 'chocotorta')">-</button>
+                                    <span class="mx-2 fs-6" id="servingsNumber-chocotorta">8</span>
+                                    <button class="btn btn-outline-primary" onclick="adjustServings(1, 'chocotorta')">+</button>
+                                </div>
+                            </div>
+                            <div class="recipe-actions d-flex flex-row justify-content-center gap-1 mb-2">
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1">
+                                    <i class="bi bi-bookmark"></i> Guardar
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1">
+                                    <i class="bi bi-share"></i> Compartir
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1" onclick="addRecipeToList('chocotorta')">
+                                    <i class="bi bi-cart-plus"></i> Agregar a lista
+                                </button>
+                                <div class="recipe-variants flex-grow-1">
+                                    <button class="btn btn-outline-secondary btn-sm dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+                                        <i class="bi bi-arrow-repeat"></i> Variantes
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('chocotorta', 'light')">light</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('chocotorta', 'sin lactosa')">sin lactosa</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <!-- Ingredientes -->
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Ingredientes</h2>
+                                    <ul class="ingredients-list" id="ingredientsList-chocotorta">
+                                        <li><span class="ingredient-amount" data-base-amount="400" data-base-servings="8">400</span> g de galletas de chocolate (tipo Chocolinas) <span class="text-muted">(<span class="calories" data-cal-per-unit="480">1920</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="400" data-base-servings="8">400</span> g de queso crema <span class="text-muted">(<span class="calories" data-cal-per-unit="342">1368</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="400" data-base-servings="8">400</span> g de dulce de leche <span class="text-muted">(<span class="calories" data-cal-per-unit="300">1200</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="200" data-base-servings="8">200</span> ml de café o leche para mojar las galletitas <span class="text-muted">(<span class="calories" data-cal-per-unit="15">30</span> cal)</span></li>
+                                    </ul>
+                                    <div class="total-calories text-end mt-3">
+                                        <strong>Total calorías aproximadas:</strong> 4518 cal
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Preparación -->
+                        <div class="col-md-8">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Preparación</h2>
+                                    <div class="steps-container">
+                                        <div class="step-item">
+                                            <div class="step-number">1</div>
+                                            <div class="step-content">
+                                                <p>Mezclar el queso crema con el dulce de leche hasta integrar bien.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">2</div>
+                                            <div class="step-content">
+                                                <p>Mojar las galletitas en café o leche y hacer capas alternando con la mezcla de queso y dulce de leche.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">3</div>
+                                            <div class="step-content">
+                                                <p>Realizar varias capas y terminar con la mezcla.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">4</div>
+                                            <div class="step-content">
+                                                <p>Refrigerar por al menos 4 horas antes de servir.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tips -->
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Tips y Consejos</h2>
+                                    <ul class="tips-list">
+                                        <li>Podés usar café con licor para un sabor más intenso.</li>
+                                        <li>Es ideal prepararla un día antes para que tome textura.</li>
+                                        <li>Se puede decorar con cacao en polvo o virutas de chocolate.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recipe Modal - Empanadas de Carne -->
+    <div class="modal fade" id="modal-empanadas" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="recipe-detail-header">
+                        <img src="images/recipes/empanadas-de-carne.png" alt="Empanadas de Carne" class="img-fluid rounded mb-3">
+                        <div class="recipe-detail-info">
+                            <h1 class="h4 mb-2">Empanadas de Carne</h1>
+                            <div class="recipe-meta mb-3">
+                                <div class="d-flex gap-3 align-items-center justify-content-center mb-2 fs-7">
+                                    <span><i class="bi bi-clock fs-5"></i> 90 min</span>
+                                    <span><i class="bi bi-people fs-5"></i> <span id="servings-empanadas">12</span></span>
+                                    <span><i class="bi bi-star-fill fs-5 text-warning"></i> 4.9</span>
+                                </div>
+                                <div class="servings-control d-flex align-items-center justify-content-center gap-2">
+                                    <button class="btn btn-outline-primary" onclick="adjustServings(-1, 'empanadas')">-</button>
+                                    <span class="mx-2 fs-6" id="servingsNumber-empanadas">12</span>
+                                    <button class="btn btn-outline-primary" onclick="adjustServings(1, 'empanadas')">+</button>
+                                </div>
+                            </div>
+                            <div class="recipe-actions d-flex flex-row justify-content-center gap-1 mb-2">
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1">
+                                    <i class="bi bi-bookmark"></i> Guardar
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1">
+                                    <i class="bi bi-share"></i> Compartir
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1" onclick="addRecipeToList('empanadas')">
+                                    <i class="bi bi-cart-plus"></i> Agregar a lista
+                                </button>
+                                <div class="recipe-variants flex-grow-1">
+                                    <button class="btn btn-outline-secondary btn-sm dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+                                        <i class="bi bi-arrow-repeat"></i> Variantes
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('empanadas', 'jugosas')">jugosas</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('empanadas', 'con choclo')">con choclo</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="changeVariant('empanadas', 'sin carne')">sin carne</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <!-- Ingredientes -->
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Ingredientes</h2>
+                                    <ul class="ingredients-list" id="ingredientsList-empanadas">
+                                        <li><span class="ingredient-amount" data-base-amount="500" data-base-servings="12">500</span> g de carne picada <span class="text-muted">(<span class="calories" data-cal-per-unit="250">1250</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="2" data-base-servings="12">2</span> unidades de cebolla <span class="text-muted">(<span class="calories" data-cal-per-unit="40">80</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="1" data-base-servings="12">1</span> unidad de pimiento rojo <span class="text-muted">(<span class="calories" data-cal-per-unit="31">31</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="50" data-base-servings="12">50</span> g de aceitunas verdes <span class="text-muted">(<span class="calories" data-cal-per-unit="145">145</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="2" data-base-servings="12">2</span> unidades de huevos duros <span class="text-muted">(<span class="calories" data-cal-per-unit="155">310</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="30" data-base-servings="12">30</span> g de pasas de uva <span class="text-muted">(<span class="calories" data-cal-per-unit="299">90</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="12" data-base-servings="12">12</span> unidades de masa para empanadas <span class="text-muted">(<span class="calories" data-cal-per-unit="150">1800</span> cal)</span></li>
+                                        <li><span class="ingredient-amount" data-base-amount="3" data-base-servings="12">3</span> cucharadas de aceite <span class="text-muted">(<span class="calories" data-cal-per-unit="120">360</span> cal)</span></li>
+                                        <li>Sal, pimienta, pimentón, comino al gusto <span class="text-muted">(0 cal)</span></li>
+                                    </ul>
+                                    <div class="total-calories text-end mt-3">
+                                        <strong>Total calorías aproximadas:</strong> 4096 cal
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Preparación -->
+                        <div class="col-md-8">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Preparación</h2>
+                                    <div class="steps-container">
+                                        <div class="step-item">
+                                            <div class="step-number">1</div>
+                                            <div class="step-content">
+                                                <p>Picar la cebolla y el pimiento y saltearlos en aceite hasta que estén tiernos.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">2</div>
+                                            <div class="step-content">
+                                                <p>Agregar la carne picada y cocinar hasta que esté dorada.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">3</div>
+                                            <div class="step-content">
+                                                <p>Incorporar las aceitunas picadas, pasas de uva, huevos duros picados y condimentar con sal, pimienta, pimentón y comino.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">4</div>
+                                            <div class="step-content">
+                                                <p>Dejar enfriar el relleno y colocar sobre la masa para empanadas.</p>
+                                            </div>
+                                        </div>
+                                        <div class="step-item">
+                                            <div class="step-number">5</div>
+                                            <div class="step-content">
+                                                <p>Cerrar y sellar bien las empanadas. Hornear a 180°C durante 20-25 minutos hasta dorar.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tips -->
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="h5 mb-3">Tips y Consejos</h2>
+                                    <ul class="tips-list">
+                                        <li>Usá masa casera o comprada según tu preferencia.</li>
+                                        <li>Podés freírlas en lugar de hornearlas para una versión más tradicional.</li>
+                                        <li>Acompañá con salsa criolla para darle un toque picante.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/recipes.js"></script>
+</body>
+
+</html>
