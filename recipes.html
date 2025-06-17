@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container-fluid px-3">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="Q'COMEMOS" height="40">
+                <img src="images/logo.png" loading="lazy" alt="Q'COMEMOS" height="40">
             </a>
             <div class="d-flex align-items-center gap-3">
                 <button class="btn btn-link" id="languageToggle" data-bs-toggle="dropdown">
@@ -34,7 +34,7 @@
                     <i class="bi bi-moon-fill"></i>
                 </button>
                 <a href="profile.html" class="user-profile">
-                    <img src="images/default-avatar.png" alt="Profile" class="rounded-circle" width="35">
+                    <img src="images/default-avatar.png" loading="lazy" alt="Profile" class="rounded-circle" width="35">
                 </a>
             </div>
         </div>
@@ -72,7 +72,123 @@
     <button class="floating-action-btn" id="addRecipeBtn">
         <i class="bi bi-plus-lg"></i>
     </button>
+<!-- Add Recipe Modal -->
+<div class="modal fade" id="addRecipeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Nueva Receta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addRecipeForm">
+                    <!-- Información básica -->
+                    <div class="mb-3">
+                        <label class="form-label">Título</label>
+                        <input type="text" class="form-control" name="title" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Imagen</label>
+                        <input type="file" class="form-control" name="image" accept="image/*" required>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label">Tiempo (min)</label>
+                            <input type="number" class="form-control" name="time" required>
+                        </div>
+                        <div class="col">
+                            <label class="form-label">Porciones</label>
+                            <input type="number" class="form-control" name="defaultServings" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Categoría</label>
+                        <select class="form-select" name="mealType" required>
+                            <option value="">Seleccionar categoría</option>
+                            <option value="Desayuno">Desayuno</option>
+                            <option value="Almuerzo">Almuerzo</option>
+                            <option value="Merienda">Merienda</option>
+                            <option value="Cena">Cena</option>
+                            <option value="Postres">Postres</option>
+                        </select>
+                    </div>
 
+                    <!-- Ingredientes -->
+                    <div class="mb-3">
+                        <label class="form-label">Ingredientes</label>
+                        <div id="ingredientsContainer">
+                            <div class="ingredient-entry d-flex gap-2 mb-2">
+                                <input type="number" class="form-control" placeholder="Cantidad" name="amounts[]" required>
+                                <input type="text" class="form-control" placeholder="Unidad" name="units[]" required>
+                                <input type="text" class="form-control" placeholder="Ingrediente" name="ingredients[]" required>
+                                <input type="number" class="form-control" placeholder="Calorías" name="calories[]" required>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary btn-sm mt-2" id="addIngredientBtn">
+                            <i class="bi bi-plus-lg"></i> Agregar ingrediente
+                        </button>
+                    </div>
+
+                    <!-- Instrucciones -->
+                    <div class="mb-3">
+                        <label class="form-label">Instrucciones</label>
+                        <div id="instructionsContainer">
+                            <div class="instruction-entry d-flex gap-2 mb-2">
+                                <input type="text" class="form-control" placeholder="Paso de preparación" name="instructions[]" required>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary btn-sm mt-2" id="addInstructionBtn">
+                            <i class="bi bi-plus-lg"></i> Agregar instrucción
+                        </button>
+                    </div>
+
+                    <!-- Tips -->
+                    <div class="mb-3">
+                        <label class="form-label">Consejos (opcional)</label>
+                        <div id="tipsContainer">
+                            <div class="tip-entry d-flex gap-2 mb-2">
+                                <input type="text" class="form-control" placeholder="Consejo" name="tips[]">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary btn-sm mt-2" id="addTipBtn">
+                            <i class="bi bi-plus-lg"></i> Agregar consejo
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="saveRecipeBtn">Guardar Receta</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Shopping List Modal -->
+<div class="modal fade" id="modal-shopping-list" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Lista de Compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="shoppingListContainer">
+                    <!-- Los items de la lista se agregarán aquí dinámicamente -->
+                </div>
+                <button type="button" class="btn btn-outline-primary btn-sm mt-3" onclick="addEmptyShoppingItem()">
+                    <i class="bi bi-plus-lg"></i> Agregar item
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="saveShoppingList()">Guardar Lista</button>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- Bottom Navigation -->
     <nav class="navbar fixed-bottom navbar-light bg-white border-top">
         <div class="container">

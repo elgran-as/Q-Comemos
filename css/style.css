@@ -1,33 +1,124 @@
 :root {
-    --primary-color: #FF7043;    /* Naranja Coral */
-    --secondary-color: #FFD54F;  /* Amarillo Suave */
-    --accent-color: #66BB6A;     /* Verde Claro */
+    /* Colores principales */
+    --primary-color: #FF6F61;    /* Coral - Para botones principales, íconos destacados y enlaces activos */
+    --secondary-color: #FFD54F;  /* Amarillo Suave - Para advertencias y etiquetas */
+    --accent-color: #66BB6A;     /* Verde Claro - Para elementos saludables y confirmaciones */
+
+    /* Neutrales y fondo */
     --background-color: #ffffff;
-    --text-color: #212121;
-    --border-color: #E0E0E0;
-    --success-color: #66BB6A;    /* Igual al acento: verde claro */
-    --warning-color: #FFD54F;    /* Amarillo suave */
-    --danger-color: #F44336;     /* Rojo (se mantiene) */
     --surface-color: #ffffff;
+    --border-color: #E0E0E0;
+
+    /* Textos */
+    --text-dark: #212121;
+    --text-color: var(--text-dark);
     --text-muted: #757575;
-    --hover-color: rgba(255, 112, 67, 0.1); /* hover con coral */
+    --text-light: #f5f5f5;
+
+    /* Estados */
+    --success-color: var(--accent-color);
+    --warning-color: var(--secondary-color);
+    --danger-color: var(--primary-color);
+
+    /* Hover */
+    --hover-color: rgba(230, 57, 70, 0.1);
 }
-/* Base Styles */
+
+/* Colores por dificultad */
+.bg-facil {
+    background-color: #c8e6c9a9;
+}
+
+.bg-media {
+    background-color: #fff9c4a9;
+}
+
+.bg-dificil {
+    background-color: #ffcdd2a9;
+}
+
+/* Tipografía y base */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--background-color);
     color: var(--text-color);
     padding-top: 60px;
     padding-bottom: 76px;
-    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
 }
 
+/* Encabezados */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Texto cuerpo */
+p, li {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+small {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* Botones */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Asegurar contraste en textos secundarios */
+.text-muted {
+    color: var(--text-muted);
+}
+
+/* Bordes para inputs o contenedores */
+.border {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
 }
 
 /* Header & Navigation */
 .navbar.fixed-top {
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     z-index: 1030;
 }
 
@@ -55,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 1040;
     display: none;
     opacity: 0;
@@ -94,20 +185,119 @@ h1, h2, h3, h4, h5, h6 {
 .card {
     border: none;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    background: var(--surface-color);
 }
 
 .suggestion-card {
     transition: transform 0.2s;
+    cursor: pointer;
 }
 
 .suggestion-card:hover {
     transform: translateY(-2px);
 }
 
+/* New Post Modal */
+.modal-content {
+    border: none;
+    border-radius: 20px;
+}
+
+.modal-header {
+    padding: 1rem 1rem 0.5rem;
+}
+
+.modal-body {
+    padding-bottom: 2rem;
+}
+
+.upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(var(--primary-color-rgb), 0.05);
+}
+
+.upload-area i {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+/* Tags */
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 0.375rem 1rem;
+    font-size: 0.875rem;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+
 .suggestion-card img {
     border-radius: 0 15px 15px 0;
+    object-fit: cover;
+}
+
+/* Enlaces */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Formularios */
+input,
+textarea,
+select {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(255, 112, 67, 0.2);
 }
 
 /* Quick Access */

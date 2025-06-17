@@ -2,6 +2,7 @@
 {
   "id": "pastel-de-papas",
   "title": "Pastel de papas",
+  "difficulty": "media",
   "image": "images/recipes/pastel-de-papas.png",
   "time": 60,
   "defaultServings": 4,
@@ -101,11 +102,13 @@
       ]
     },
     "con batata": {
+      "image": "images/recipes/pastel-batata.png",
       "modifiedInstructions": [
         "Reemplazar parte o todas las papas por batatas hervidas. El puré quedará más dulce y cremoso."
       ]
     },
     "light": {
+      "image": "images/recipes/pastel-light.png",
       "modifiedInstructions": [
         "Usar leche descremada, reducir la manteca a 1 cda, y carne magra o mezcla con vegetales. Opción sin queso."
       ]
@@ -121,6 +124,7 @@
 {
   "id": "tarta-de-zapallitos",
   "title": "Tarta de zapallitos",
+  "difficulty": "media",
   "image": "images/recipes/tarta-de-zapallitos.png",
   "time": 50,
   "defaultServings": 4,
@@ -238,8 +242,123 @@
   }
 },
 {
+  "id": "puchero-criollo",
+  "title": "Puchero Criollo",
+  "difficulty": "alta",
+  "image": "images/recipes/puchero-criollo.png",
+  "time": 210,
+  "defaultServings": 6,
+  "rating": 4.8,
+  "mealType": "almuerzo",
+  "ingredients": [
+    {
+      "name": "osobuco o falda",
+      "baseAmount": 1,
+      "unit": "kg",
+      "caloriesPerUnit": 250,
+      "totalCalories": 2500
+    },
+    {
+      "name": "chorizo",
+      "baseAmount": 3,
+      "unit": "unidades",
+      "caloriesPerUnit": 300,
+      "totalCalories": 900
+    },
+    {
+      "name": "panceta",
+      "baseAmount": 300,
+      "unit": "g",
+      "caloriesPerUnit": 400,
+      "totalCalories": 1200
+    },
+    {
+      "name": "zapallo anco",
+      "baseAmount": 500,
+      "unit": "g",
+      "caloriesPerUnit": 30,
+      "totalCalories": 150
+    },
+    {
+      "name": "papa",
+      "baseAmount": 3,
+      "unit": "unidades",
+      "caloriesPerUnit": 80,
+      "totalCalories": 240
+    },
+    {
+      "name": "batata",
+      "baseAmount": 2,
+      "unit": "unidades",
+      "caloriesPerUnit": 86,
+      "totalCalories": 172
+    },
+    {
+      "name": "zanahoria",
+      "baseAmount": 2,
+      "unit": "unidades",
+      "caloriesPerUnit": 41,
+      "totalCalories": 82
+    },
+    {
+      "name": "choclo",
+      "baseAmount": 2,
+      "unit": "unidades",
+      "caloriesPerUnit": 96,
+      "totalCalories": 192
+    },
+    {
+      "name": "repollo",
+      "baseAmount": 300,
+      "unit": "g",
+      "caloriesPerUnit": 25,
+      "totalCalories": 75
+    },
+    {
+      "name": "sal y pimienta",
+      "baseAmount": 1,
+      "unit": "cucharada",
+      "caloriesPerUnit": 0,
+      "totalCalories": 0
+    }
+  ],
+  "instructions": [
+    "En una olla grande, colocar el osobuco o falda en agua fría con sal y llevar a ebullición.",
+    "Retirar la espuma con una cuchara y cocinar a fuego bajo durante una hora y media.",
+    "Agregar el chorizo, la panceta y continuar cocinando.",
+    "Luego de 30 minutos, incorporar las papas, batatas, zanahorias, zapallo y choclos.",
+    "En los últimos 15 minutos de cocción, agregar el repollo troceado.",
+    "Rectificar sal y pimienta. Cocinar hasta que todos los ingredientes estén tiernos.",
+    "Servir en platos hondos con caldo o presentar los ingredientes escurridos en fuente, acompañados de salsa criolla o chimichurri."
+  ],
+  "tips": [
+    "Se puede hacer en olla a presión para reducir el tiempo, aunque el sabor cambia.",
+    "Para más sabor, usar un poco de caldo de huesos o agregar cebolla y laurel al agua.",
+    "Ideal para compartir: servir todo en una fuente central y que cada uno se sirva.",
+    "Preparar con anticipación: al día siguiente está más sabroso."
+  ],
+  "variants": {
+    "sin carne": {
+      "modifiedInstructions": [
+        "Omitir las carnes y usar caldo de verduras. Reforzar el sabor con hongos secos y especias."
+      ],
+      "additionalIngredients": [
+        {
+          "name": "hongos secos",
+          "baseAmount": 50,
+          "unit": "g",
+          "caloriesPerUnit": 284,
+          "totalCalories": 142
+        }
+      ]
+    }
+  }
+},
+
+{
   "id": "milanesas-con-pure",
   "title": "Milanesas con puré",
+  "difficulty": "facil",
   "image": "images/recipes/milanesas-con-pure.png",
   "time": 45,
   "defaultServings": 4,
@@ -376,6 +495,7 @@
 {
   "id": "pizza-muzzarella",
   "title": "Pizza de muzzarella",
+  "difficulty": "media",
   "image": "images/recipes/pizza-muzzarella.png",
   "time": 45,
   "defaultServings": 4,
@@ -505,7 +625,8 @@
 },
 {
   "id": "spaghetti-con-salsa",
-  "title": "Spaghetti con salsa de tomate",
+  "title": "Spaghetti con salsa",
+  "difficulty": "facil",
   "image": "images/recipes/spaghetti-con-salsa.png",
   "time": 30,
   "defaultServings": 4,
@@ -619,11 +740,12 @@
 {
   "id": "flan-con-dulce-de-leche",
   "title": "Flan con dulce de leche",
+  "difficulty": "facil",
   "image": "images/recipes/flan-con-dulce-de-leche.png",
   "time": 90,
   "defaultServings": 6,
   "rating": 4.9,
-  "mealType": "postre",
+  "mealType": "postreS",
   "ingredients": [
     {
       "name": "huevos",
@@ -701,6 +823,457 @@
       ]
     }
   }
+},
+
+{
+  "id": "chocotorta",
+  "title": "Chocotorta",
+  "difficulty": "facil",
+  "image": "images/recipes/chocotorta.png",
+  "time": 240,
+  "defaultServings": 8,
+  "rating": 4.8,
+  "mealType": "postres",
+  "ingredients": [
+    {
+      "name": "galletitas de chocolate (tipo Chocolinas)",
+      "baseAmount": 400,
+      "unit": "g",
+      "caloriesPerUnit": 450,
+      "totalCalories": 1800
+    },
+    {
+      "name": "queso crema",
+      "baseAmount": 500,
+      "unit": "g",
+      "caloriesPerUnit": 250,
+      "totalCalories": 1250
+    },
+    {
+      "name": "dulce de leche",
+      "baseAmount": 500,
+      "unit": "g",
+      "caloriesPerUnit": 315,
+      "totalCalories": 1575
+    },
+    {
+      "name": "leche (para remojar las galletitas)",
+      "baseAmount": 200,
+      "unit": "ml",
+      "caloriesPerUnit": 60,
+      "totalCalories": 120
+    }
+  ],
+  "instructions": [
+    "Mezclar el queso crema con el dulce de leche hasta obtener una crema homogénea.",
+    "Remojar ligeramente las galletitas en leche.",
+    "En una fuente rectangular, colocar una capa de galletitas remojadas.",
+    "Cubrir con una capa de la mezcla de queso y dulce de leche.",
+    "Repetir capas hasta terminar los ingredientes, finalizando con la crema.",
+    "Llevar a la heladera al menos 4 horas (idealmente de un día para otro).",
+    "Opcional: decorar con galletitas trituradas, cacao o chocolate rallado."
+  ],
+  "tips": [
+    "Usar dulce de leche repostero para una textura más firme.",
+    "Podés reemplazar parte del queso crema por crema de leche batida.",
+    "Cuanto más tiempo repose en la heladera, mejor será la consistencia."
+  ],
+  "variants": {
+    "con café": {
+      "modifiedInstructions": [
+        "Reemplazar la leche para remojar las galletitas por café frío para un sabor más intenso."
+      ]
+    },
+    "light": {
+      "modifiedInstructions": [
+        "Usar queso crema light y dulce de leche reducido en azúcar.",
+        "Remojar las galletitas en leche descremada o bebida vegetal sin azúcar."
+      ]
+    },
+    "sin TACC": {
+      "modifiedInstructions": [
+        "Reemplazar las galletitas tradicionales por una versión sin gluten."
+      ]
+    }
+  }
+},
+{
+  "id": "empanadas-de-carne",
+  "title": "Empanadas de carne",
+  "difficulty": "media",
+  "image": "images/recipes/empanadas-de-carne.png",
+  "time": 60,
+  "defaultServings": 12,
+  "rating": 4.7,
+  "mealType": "almuerzo",
+  "ingredients": [
+    {
+      "name": "carne picada (nalga o paleta)",
+      "baseAmount": 500,
+      "unit": "g",
+      "caloriesPerUnit": 250,
+      "totalCalories": 1250
+    },
+    {
+      "name": "cebolla",
+      "baseAmount": 2,
+      "unit": "unidades",
+      "caloriesPerUnit": 40,
+      "totalCalories": 80
+    },
+    {
+      "name": "huevo duro",
+      "baseAmount": 2,
+      "unit": "unidades",
+      "caloriesPerUnit": 155,
+      "totalCalories": 310
+    },
+    {
+      "name": "aceite",
+      "baseAmount": 2,
+      "unit": "cucharadas",
+      "caloriesPerUnit": 120,
+      "totalCalories": 240
+    },
+    {
+      "name": "aceitunas verdes",
+      "baseAmount": 50,
+      "unit": "g",
+      "caloriesPerUnit": 115,
+      "totalCalories": 58
+    },
+    {
+      "name": "comino",
+      "baseAmount": 1,
+      "unit": "cucharadita",
+      "caloriesPerUnit": 8,
+      "totalCalories": 8
+    },
+    {
+      "name": "sal y pimienta",
+      "baseAmount": 1,
+      "unit": "cucharadita",
+      "caloriesPerUnit": 0,
+      "totalCalories": 0
+    },
+    {
+      "name": "discos de masa para empanadas",
+      "baseAmount": 12,
+      "unit": "unidades",
+      "caloriesPerUnit": 100,
+      "totalCalories": 1200
+    }
+  ],
+  "instructions": [
+    "Picar la cebolla y rehogarla en aceite hasta que esté transparente.",
+    "Agregar la carne picada y cocinar hasta que cambie de color.",
+    "Condimentar con sal, pimienta y comino.",
+    "Incorporar las aceitunas picadas y los huevos duros picados.",
+    "Dejar enfriar el relleno antes de armar las empanadas.",
+    "Rellenar cada disco de masa con una cucharada del preparado, cerrar y repulgar.",
+    "Hornear a 200 °C durante 20-25 minutos o freír en abundante aceite caliente."
+  ],
+  "tips": [
+    "Dejar enfriar el relleno evita que se rompa la masa.",
+    "Podés agregar pimentón, ají molido o morrón picado al gusto.",
+    "Para congelar, armá las empanadas sin hornear y guardalas separadas entre sí."
+  ],
+  "variants": {
+    "picantes": {
+      "modifiedInstructions": [
+        "Agregar ají molido o unas gotas de salsa picante al relleno."
+      ]
+    },
+    "sin TACC": {
+      "modifiedInstructions": [
+        "Usar discos de masa sin gluten y verificar que todos los ingredientes sean aptos."
+      ]
+    },
+    "vegetarianas": {
+      "modifiedInstructions": [
+        "Reemplazar la carne por lentejas cocidas y condimentar igual."
+      ]
+    }
+  }
+}, 
+{
+  "id": "asado-criollo",
+  "title": "Asado con chimichurri",
+  "difficulty": "media",
+  "image": "images/recipes/asado-criollo.png",
+  "time": 150,
+  "defaultServings": 4,
+  "rating": 5,
+  "mealType": "almuerzo",
+  "ingredients": [
+    {
+      "name": "costillas de res (asado de tira)",
+      "baseAmount": 1.5,
+      "unit": "kg",
+      "caloriesPerUnit": 280,
+      "totalCalories": 4200
+    },
+    {
+      "name": "chorizos",
+      "baseAmount": 4,
+      "unit": "unidades",
+      "caloriesPerUnit": 250,
+      "totalCalories": 1000
+    },
+    {
+      "name": "morcillas",
+      "baseAmount": 2,
+      "unit": "unidades",
+      "caloriesPerUnit": 280,
+      "totalCalories": 560
+    },
+    {
+      "name": "provoleta",
+      "baseAmount": 200,
+      "unit": "g",
+      "caloriesPerUnit": 350,
+      "totalCalories": 700
+    },
+    {
+      "name": "sal gruesa",
+      "baseAmount": 2,
+      "unit": "cucharadas",
+      "caloriesPerUnit": 0,
+      "totalCalories": 0
+    },
+    {
+      "name": "chimichurri (para servir)",
+      "baseAmount": 100,
+      "unit": "ml",
+      "caloriesPerUnit": 250,
+      "totalCalories": 250
+    }
+  ],
+  "instructions": [
+    "Preparar el fuego con carbón o leña y dejar formar brasas.",
+    "Condimentar las costillas con sal gruesa y colocar sobre la parrilla del lado del hueso.",
+    "Cocinar lentamente durante 1 hora y media, dando vuelta una sola vez.",
+    "Agregar los chorizos, morcillas y la provoleta a mitad de cocción.",
+    "Servir todo bien caliente acompañado de chimichurri y pan."
+  ],
+  "tips": [
+    "Usá brasas moderadas, no fuego directo, para una cocción pareja.",
+    "La provoleta se puede hacer en una cazuelita de hierro con orégano y ají molido.",
+    "El chimichurri tradicional lleva ajo, perejil, orégano, ají molido, vinagre, aceite y sal."
+  ],
+  "variants": {
+    "con vegetales a la parrilla": {
+      "modifiedInstructions": [
+        "Agregar rodajas de morrón, cebolla, zapallito y berenjena a la parrilla con aceite de oliva y sal."
+      ]
+    },
+    "solo carne magra": {
+      "modifiedInstructions": [
+        "Reemplazar las costillas por vacío o colita de cuadril y evitar chorizos y morcillas."
+      ]
+    },
+    "light": {
+      "modifiedInstructions": [
+        "Reducir las porciones de embutidos, servir con ensalada fresca y optar por chimichurri con poco aceite."
+      ]
+    }
+  }
+},
+{
+  "id": "matambre-a-la-pizza",
+  "title": "Matambre a la pizza",
+  "difficulty": "media",
+  "image": "images/recipes/matambre-a-la-pizza.webp",
+  "time": 90,
+  "defaultServings": 4,
+  "rating": 4.8,
+  "mealType": "almuerzo",
+  "ingredients": [
+    {
+      "name": "matambre de vaca",
+      "baseAmount": 1,
+      "unit": "kg",
+      "caloriesPerUnit": 250,
+      "totalCalories": 2500
+    },
+    {
+      "name": "salsa de tomate",
+      "baseAmount": 250,
+      "unit": "ml",
+      "caloriesPerUnit": 45,
+      "totalCalories": 113
+    },
+    {
+      "name": "mozzarella",
+      "baseAmount": 300,
+      "unit": "g",
+      "caloriesPerUnit": 320,
+      "totalCalories": 960
+    },
+    {
+      "name": "tomates en rodajas",
+      "baseAmount": 2,
+      "unit": "unidades",
+      "caloriesPerUnit": 22,
+      "totalCalories": 44
+    },
+    {
+      "name": "orégano",
+      "baseAmount": 1,
+      "unit": "cucharadita",
+      "caloriesPerUnit": 6,
+      "totalCalories": 6
+    },
+    {
+      "name": "aceite de oliva",
+      "baseAmount": 1,
+      "unit": "cucharada",
+      "caloriesPerUnit": 119,
+      "totalCalories": 119
+    },
+    {
+      "name": "sal y pimienta",
+      "baseAmount": 1,
+      "unit": "a gusto",
+      "caloriesPerUnit": 0,
+      "totalCalories": 0
+    }
+  ],
+  "instructions": [
+    "Hervir el matambre en agua con sal durante 40 minutos para ablandarlo.",
+    "Escurrir y colocar en una fuente o parrilla con la grasa hacia abajo.",
+    "Cubrir con la salsa de tomate, luego con la mozzarella, las rodajas de tomate y espolvorear con orégano, sal y pimienta.",
+    "Gratinar en horno caliente o parrilla con tapa hasta que el queso se derrita.",
+    "Rociar con aceite de oliva y servir caliente."
+  ],
+  "tips": [
+    "Podés agregar morrones asados o aceitunas negras para más sabor.",
+    "Para un toque picante, añadir ají molido o rodajas finas de jalapeños.",
+    "Si lo hacés al horno, usá una asadera aceitada para evitar que se pegue."
+  ],
+  "variants": {
+    "light": {
+      "modifiedInstructions": [
+        "Usar queso mozzarella light y evitar el aceite de oliva para reducir calorías."
+      ]
+    },
+    "relleno": {
+      "modifiedInstructions": [
+        "Antes de hervir, rellenar el matambre con huevo duro, zanahoria y espinaca, enrollar y atar. Luego cocinar como matambre arrollado y cubrir con pizza."
+      ]
+    },
+    "vegetariana": {
+      "modifiedInstructions": [
+        "Reemplazar el matambre por una base de berenjena o coliflor grillada y proceder igual con la cobertura tipo pizza."
+      ]
+    }
+  }
+},
+{
+  "id": "locro-argentino",
+  "title": "Locro Tradicional",
+  "difficulty": "alta",
+  "image": "images/recipes/locro.webp",
+  "time": 240,
+  "defaultServings": 8,
+  "rating": 4.9,
+  "mealType": "almuerzo",
+  "ingredients": [
+    {
+      "name": "maíz blanco partido",
+      "baseAmount": 500,
+      "unit": "g",
+      "caloriesPerUnit": 360,
+      "totalCalories": 1800
+    },
+    {
+      "name": "porotos",
+      "baseAmount": 300,
+      "unit": "g",
+      "caloriesPerUnit": 340,
+      "totalCalories": 1020
+    },
+    {
+      "name": "carne de cerdo (panceta, cuerito)",
+      "baseAmount": 500,
+      "unit": "g",
+      "caloriesPerUnit": 400,
+      "totalCalories": 2000
+    },
+    {
+      "name": "carne vacuna (falda o osobuco)",
+      "baseAmount": 600,
+      "unit": "g",
+      "caloriesPerUnit": 250,
+      "totalCalories": 1500
+    },
+    {
+      "name": "chorizo colorado",
+      "baseAmount": 2,
+      "unit": "unidades",
+      "caloriesPerUnit": 300,
+      "totalCalories": 600
+    },
+    {
+      "name": "zapallo criollo",
+      "baseAmount": 1,
+      "unit": "kg",
+      "caloriesPerUnit": 30,
+      "totalCalories": 300
+    },
+    {
+      "name": "cebolla",
+      "baseAmount": 2,
+      "unit": "unidades",
+      "caloriesPerUnit": 40,
+      "totalCalories": 80
+    },
+    {
+      "name": "pimentón, ají molido, sal",
+      "baseAmount": 1,
+      "unit": "cucharada de cada uno",
+      "caloriesPerUnit": 10,
+      "totalCalories": 30
+    }
+  ],
+  "instructions": [
+    "Remojar el maíz y los porotos en agua la noche anterior.",
+    "En una olla grande, hervir el maíz y los porotos durante una hora.",
+    "Agregar la carne vacuna, la de cerdo y continuar la cocción a fuego bajo.",
+    "Incorporar el zapallo trozado, que se deshace durante la cocción.",
+    "Agregar los chorizos en rodajas, cebolla y condimentos.",
+    "Cocinar durante 3 a 4 horas, revolviendo ocasionalmente para evitar que se pegue.",
+    "Preparar una fritura (grasita colorada) con pimentón y grasa de cerdo y verter sobre cada plato al servir."
+  ],
+  "tips": [
+    "El secreto del locro es la cocción lenta y constante: no apures el proceso.",
+    "Revolver seguido con cuchara de madera para integrar sabores.",
+    "El zapallo se debe deshacer y espesar el locro naturalmente.",
+    "Si no conseguís chorizo colorado, reemplazá por salame picado grueso bien curado."
+  ],
+  "variants": {
+    "vegetariano": {
+      "modifiedInstructions": [
+        "Eliminar las carnes y reemplazar por soja texturizada, calabaza extra, y condimentos ahumados."
+      ],
+      "additionalIngredients": [
+        {
+          "name": "soja texturizada",
+          "baseAmount": 300,
+          "unit": "g",
+          "caloriesPerUnit": 330,
+          "totalCalories": 990
+        }
+      ]
+    },
+    "picante": {
+      "modifiedInstructions": [
+        "Agregar ají molido extra y un toque de salsa picante al final de la cocción."
+      ]
+    }
+  }
 }
+
+
 
 ]
